@@ -4,28 +4,28 @@
 AI Content Engine Prototype for Beauty E-commerce
 
 ## Objective
-Build a quick working prototype that takes a single cosmetic product as input, generates a structured product description, accepts manually collected competitor marketing records, analyzes market messaging patterns, proposes campaign directions, and generates channel-specific marketing content. The prototype should demonstrate an end-to-end flow from product truth to competitor-aware marketing outputs while keeping the product description as the factual foundation.[cite:35][cite:56][cite:59]
+Build a quick working prototype that takes a single cosmetic product as input, generates a structured product description, accepts manually collected competitor marketing records, analyzes market messaging patterns, proposes campaign directions, and generates channel-specific marketing content. The prototype should demonstrate an end-to-end flow from product truth to competitor-aware marketing outputs while keeping the product description as the factual foundation.
 
 ## Problem Statement
-Beauty and e-commerce teams often need to create both product descriptions and marketing content for many products across multiple channels. Existing workflows are repetitive, inconsistent, and slow, and they can easily produce generic copy or unsupported claims if content is generated without a stable product-truth layer.[cite:35][cite:42][cite:45]
+Beauty and e-commerce teams often need to create both product descriptions and marketing content for many products across multiple channels. Existing workflows are repetitive, inconsistent, and slow, and they can easily produce generic copy or unsupported claims if content is generated without a stable product-truth layer.
 
 This prototype solves that by creating a two-stage AI workflow:
 1. Generate a structured, human-readable, product-faithful description from raw product data.
-2. Use that validated product truth plus manually fed competitor campaign records to generate differentiated, reviewable marketing directions and assets.[cite:35][cite:56][cite:64]
+2. Use that validated product truth plus manually fed competitor campaign records to generate differentiated, reviewable marketing directions and assets.
 
 ## Target User
 The primary user is an internal content, merchandising, innovation, or AI team member working on beauty-product content for an e-commerce environment. The user is not assumed to be deeply technical, so the prototype should present clear inputs, visible intermediate outputs, and editable final drafts.
 
 ## Version Scope
-This is a version 0 prototype. It does not need full production scraping, authentication, CMS publishing, or multilingual support. Competitor campaign data will be manually fed into the system after being collected using an external scraping or research tool.[cite:56][cite:62][cite:64]
+This is a version 0 prototype. It does not need full production scraping, authentication, CMS publishing, or multilingual support. Competitor campaign data will be manually fed into the system after being collected using an external scraping or research tool.
 
 ## Goals
 - Accept raw cosmetic product data and convert it into a structured product truth object.
-- Generate a refined hybrid product description that preserves key facts and improves readability and customer relevance.[cite:35]
+- Generate a refined hybrid product description that preserves key facts and improves readability and customer relevance.
 - Accept structured competitor campaign inputs.
-- Analyze competitor messaging patterns and identify whitespace opportunities.[cite:56][cite:59]
+- Analyze competitor messaging patterns and identify whitespace opportunities.
 - Generate 3 to 5 campaign directions.
-- Generate draft marketing assets for a selected direction across multiple channels.[cite:42][cite:45][cite:48]
+- Generate draft marketing assets for a selected direction across multiple channels.
 - Allow the user to review and regenerate outputs.
 
 ## Non-Goals
@@ -46,7 +46,7 @@ This is a version 0 prototype. It does not need full production scraping, authen
 7. System proposes campaign directions.
 8. User selects one direction.
 9. System generates channel-specific marketing assets.
-10. User reviews, edits, copies, or exports the results.[cite:35][cite:56]
+10. User reviews, edits, copies, or exports the results.
 
 ## Functional Requirements
 
@@ -73,7 +73,7 @@ The system must convert raw input into a structured product truth object that in
 - Proof points
 - Hero ingredients and plain-language roles
 - Claims guardrails
-- Brand voice rules.[cite:35]
+- Brand voice rules.
 
 ### Module 3: Product Description Generation
 The system must generate:
@@ -86,7 +86,7 @@ The system must generate:
 - Warnings and storage
 - Specifications / INCI block
 
-The description should be hybrid in tone: clear, commercially useful, and lightly empathetic without becoming overly emotional. It must preserve key product facts and avoid unsupported claim language.[cite:35][cite:17][cite:29]
+The description should be hybrid in tone: clear, commercially useful, and lightly empathetic without becoming overly emotional. It must preserve key product facts and avoid unsupported claim language.
 
 ### Module 4: Competitor Campaign Input
 The system must accept manually fed competitor records in JSON or form-based entry. Each competitor record should include:
@@ -105,7 +105,7 @@ The system must accept manually fed competitor records in JSON or form-based ent
 - Proof style
 - Source URL
 - Date observed
-- Notes.[cite:56][cite:62][cite:64]
+- Notes.
 
 ### Module 5: Pattern Analysis
 The system must analyze competitor records and output:
@@ -114,7 +114,7 @@ The system must analyze competitor records and output:
 - Overused phrases
 - Common proof styles
 - Whitespace opportunities
-- Risk flags around claim style or saturation.[cite:56][cite:59]
+- Risk flags around claim style or saturation.
 
 ### Module 6: Campaign Direction Generation
 The system must generate 3 to 5 candidate directions. Each direction must include:
@@ -127,7 +127,7 @@ The system must generate 3 to 5 candidate directions. Each direction must includ
 - Key messages
 - Proof points to emphasize
 - Reasons to believe
-- Watchouts.[cite:41][cite:47][cite:59]
+- Watchouts.
 
 ### Module 7: Marketing Asset Generation
 After a direction is selected, the system must generate:
@@ -135,7 +135,7 @@ After a direction is selected, the system must generate:
 - Category-card copy
 - Social ad variants (hook, body, CTA)
 - Email subject lines and preview text
-- Optional short landing-page blurbs.[cite:42][cite:45][cite:48]
+- Optional short landing-page blurbs.
 
 ## UX Requirements
 - Use a simple single-page flow or multi-step wizard.
@@ -182,7 +182,7 @@ The prototype should use separate prompts for:
 - Campaign direction generation
 - Asset generation
 
-The prompts should always treat product truth as the factual source of record, and competitor messaging as pattern evidence rather than copy to imitate.[cite:35][cite:56]
+The prompts should always treat product truth as the factual source of record, and competitor messaging as pattern evidence rather than copy to imitate.
 
 ## Output Quality Requirements
 - Preserve core product facts.
